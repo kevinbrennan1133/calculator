@@ -103,22 +103,22 @@ class calcViewController: UIViewController {
     func milesToKilometers(_ mile: String) -> String {
         let number: Double = Double(mile)!
         let multiply: Double = 1.61
-        return String(number * multiply) + " " + "km"
+        return String(format: "%.2f", number * multiply) + " " + "km"
     }
     func kiloToMiles(_ kilo: String) -> String {
         let number: Double = Double(kilo)!
         let divide: Double = 1.61
-        return String(number / divide) + " " + "mi"
+        return String(format: "%.2f", number / divide) + " " + "mi"
     }
     func fahrenheitToCelcius(_ fahrenheit: String) -> String {
         let number: Double = Double(fahrenheit)!
         let convert: Double = 5/9
-        return String((number - 32) * convert) + " " + "\u{00B0}C"
+        return String(format: "%.2f", (number - 32) * convert) + " " + "\u{00B0}C"
     }
     func celciusToFahrenheit(_ celcius: String) -> String {
         let number: Double = Double(celcius)!
         let convert: Double = 9/5
-        return String((number * convert) + 32) + " " + "\u{00B0}F"
+        return String(format: "%.2f", (number * convert) + 32) + " " + "\u{00B0}F"
     }
     
     
